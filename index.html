@@ -8,8 +8,10 @@ header{margin-bottom:30px;background:#E8F5EC;border:1px solid #C9E4D1;border-rad
 th:last-child,td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}tbody tr:hover{background:#f5f8ff}.rank{color:var(--secondary);font-variant-numeric:tabular-nums}footer{font-size:12px;color:var(--secondary);padding-top:20px}.notice{font-size:13px;color:var(--secondary);padding:15px;background:#f3f5fa;border-radius:8px}.hidden{display:none}@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}.table-head{align-items:flex-start;flex-direction:column}input{width:100%}}@media(max-width:480px){main{padding:24px 16px}.card{padding:18px}.value{font-size:26px}h1{font-size:28px}.kpis{gap:10px}.canvas-wrap{height:310px}}
 /* 검색창과 출간연도 선택기를 나란히 배치합니다. */
 .table-filters{display:flex;gap:10px;align-items:center;max-width:100%}select{padding:12px;border:1px solid #CDD3E0;border-radius:10px;background:#fff;color:var(--ink);font:inherit;font-size:14px}select:focus{outline:2px solid var(--blue);outline-offset:2px}@media(max-width:900px){.table-filters{width:100%}.table-filters input{flex:1;min-width:0}}@media(max-width:480px){.table-filters{flex-wrap:wrap}.table-filters input{flex-basis:100%}.table-filters select{width:100%}}
+/* 제목 옆에 고정된 기준 월을 작은 글씨로 표시합니다. */
+.title-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}.title-period{font-size:13px;font-weight:500;color:var(--secondary);white-space:nowrap}
 </style></head><body><main>
-<header><div class="eyebrow">BOOK DATA / OVERVIEW</div><h1>도서 인사이트</h1><p>50개 도서의 가격 분포와 출판사 구성을 한눈에 살펴보세요.</p></header>
+<header><div class="eyebrow">BOOK DATA / OVERVIEW</div><div class="title-row"><h1>도서 인사이트</h1><span class="title-period">2026년 10월 기준</span></div><p>50개 도서의 가격 분포와 출판사 구성을 한눈에 살펴보세요.</p></header>
 <section class="kpis" aria-label="전체 데이터 요약">
 <div class="card"><div class="kpi-label">전체 도서 수</div><div class="value"><span id="total"></span><span class="unit">개</span></div><div class="kpi-note">세트 상품도 1개 항목으로 집계</div></div>
 <div class="card"><div class="kpi-label">평균 가격</div><div class="value"><span id="average"></span><span class="unit">원</span></div><div class="kpi-note">전체 도서 가격의 산술평균</div></div>
